@@ -11,34 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711200623) do
+ActiveRecord::Schema.define(version: 20150825075105) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "droids", force: :cascade do |t|
-    t.string   "name"
-    t.text     "appears_in"
-    t.string   "primary_function"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+  create_table "todos", force: :cascade do |t|
+    t.boolean  "complete"
+    t.string   "text"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "friendships", force: :cascade do |t|
-    t.integer  "from_character_id"
-    t.string   "from_character_type"
-    t.integer  "to_character_id"
-    t.string   "to_character_type"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
+  add_index "todos", ["user_id"], name: "index_todos_on_user_id"
 
-  create_table "humen", force: :cascade do |t|
-    t.string   "name"
-    t.text     "appears_in"
-    t.string   "home_planet"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

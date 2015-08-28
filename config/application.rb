@@ -28,8 +28,10 @@ module GraphqlRubyDemo
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.autoload_paths << Rails.root.join('app', 'graph')
     config.autoload_paths << Rails.root.join('app', 'graph', 'types')
     config.autoload_paths << Rails.root.join('app', 'graph', 'fields')
+    config.autoload_paths << Rails.root.join('app', 'graph', 'mutations')
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

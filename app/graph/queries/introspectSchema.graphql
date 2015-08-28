@@ -1,8 +1,0 @@
-query introspectSchema {
-  __schema {
-    types { name }
-    queryType { fields  { name } }
-    mutationType { fields { name } }
-    directives { name }
-  }
-}

@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+graphql-ruby-demo_development
+graphql-ruby-demo_test

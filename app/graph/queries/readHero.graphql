@@ -1,3 +1,0 @@
-query readHero {
-  hero { name, id }
-}

@@ -1,5 +1,0 @@
-query readLukesFriends {
-  luke: human(id: 1000) {
-    friends { name }
-  }
-}

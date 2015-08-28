@@ -1,7 +1,0 @@
-query invalidFields {
-  hero {
-    id,
-    nonsenseField,
-    name(nonsenseArg: 1)
-  }
-}

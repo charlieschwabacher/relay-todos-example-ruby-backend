@@ -1,7 +1,14 @@
-## graphql-ruby-demo
-Shows an implementation of GraphQL via [graphql-ruby](https://github.com/rmosolgo/graphql-ruby).
+## Relay Todos Example Ruby Backend
+This is a ruby implementation of the backend for the relay [todos example](https://github.com/facebook/relay/tree/master/examples/todo) using
+[graphql-ruby](https://github.com/rmosolgo/graphql-ruby) and [graphql-ruby-relay](https://github.com/rmosolgo/graphql-ruby-relay)
 
+To run, `rails s --port 8080`, comment out the following lines in server.js
+from the todos example, and run that w/ `npm start`.
 
-- Try it on [heroku](http://graphql-ruby-demo.herokuapp.com/).
-- Schema is defined in  [`/app/graph`](https://github.com/rmosolgo/graphql-ruby-demo/tree/master/app/graph).
-- Queries are served by [`queries#create`](https://github.com/rmosolgo/graphql-ruby-demo/blob/master/app/controllers/queries_controller.rb#L8).
+```
+// var graphQLServer = express();
+// graphQLServer.use('/', graphQLHTTP({schema: GraphQLTodoSchema, pretty: true}));
+// graphQLServer.listen(GRAPHQL_PORT, () => console.log(
+//   `GraphQL Server is now running on http://localhost:${GRAPHQL_PORT}`
+// ));
+```

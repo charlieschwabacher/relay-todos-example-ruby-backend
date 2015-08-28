@@ -1,15 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'graphql', '0.5.0'
-gem 'skyblue_rails'
-gem 'react-rails'
-gem 'rails_12factor', group: :production
+gem 'graphql', git: 'git@github.com:charlieschwabacher/graphql-ruby.git'
+gem 'graphql-relay'
 gem 'rails', '4.2.2'
-gem 'pg'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
+gem 'sqlite3'
 
 group :development, :test do
   gem 'better_errors'

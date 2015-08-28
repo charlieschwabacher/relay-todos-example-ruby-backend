@@ -1,15 +1,3 @@
-# var Root = new GraphQLObjectType({
-#   name: 'Root',
-#   fields: {
-#     viewer: {
-#       type: GraphQLUser,
-#       resolve: () => getViewer()
-#     },
-#     node: nodeField
-#   },
-# });
-
-
 QueryRoot = GraphQL::ObjectType.define do
   name 'Query'
   description 'The query root for this schema'

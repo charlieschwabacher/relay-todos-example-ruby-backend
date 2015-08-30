@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'graphql', git: 'git@github.com:charlieschwabacher/graphql-ruby.git'
+gem 'graphql'
 gem 'graphql-relay'
 gem 'rails', '4.2.2'
 gem 'sqlite3'
